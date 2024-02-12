@@ -16,6 +16,7 @@ const Producto = db.define('Producto', {
     }
 }, 
 {
+    tableName: "productos",
     createdAt: false,
     updatedAt: false
 });

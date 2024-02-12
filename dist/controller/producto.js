@@ -15,8 +15,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.putProduct = exports.postProduct = exports.deleteProduct = exports.getProduct = exports.getProducts = void 0;
 const producto_1 = __importDefault(require("../models/producto"));
 const getProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const listProducts = yield producto_1.default.findAll();
-    res.json(listProducts);
+    try {
+        const listProducts = yield producto_1.default.findAll();
+        res.json(listProducts);
+    }
+    catch (error) {
+        console.log(error);
+    }
 });
 exports.getProducts = getProducts;
 const getProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* () {

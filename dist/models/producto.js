@@ -19,6 +19,7 @@ const Producto = connection_1.default.define('Producto', {
         type: sequelize_1.DataTypes.STRING
     }
 }, {
+    tableName: "productos",
     createdAt: false,
     updatedAt: false
 });
